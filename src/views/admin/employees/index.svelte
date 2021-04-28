@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { onDestroy } from 'svelte'
 
   import { FirebaseResults } from '../../../middleware/database'
@@ -47,3 +47,4 @@
   <Header on:updateFilter={updateFilter} />
   <ListEmployees {filteredEmployees} />
 </div>
+ -->

@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { Functions } from '../../../config/firebase'
   import { navigateTo } from 'svelte-router-spa'
   import { Employees } from '../../../middleware/database/employees'
@@ -53,3 +53,4 @@
     </div>
   </div>
 </div>
+ -->

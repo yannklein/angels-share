@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { navigateTo } from 'svelte-router-spa'
 
   import { Employees } from '../../../middleware/database/employees'
@@ -63,3 +63,4 @@
     </div>
   </div>
 {/if}
+ -->

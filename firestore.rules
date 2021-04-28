@@ -16,6 +16,12 @@ service cloud.firestore {
       allow create: if userAndAdmin();
       allow update, delete: if companyAdmin()
     }
+
+    match /users/userId} {
+      allow read: if isSignedIn();
+      allow create: if userAndAdmin();
+      allow update, delete: if userAndAdmin()
+    }
   }
 
   function isSignedIn() {
