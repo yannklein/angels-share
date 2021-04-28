@@ -9,6 +9,8 @@
   import FormButtons from '../../components/forms/buttons.svelte'
   import { notificationMessage } from '../../../stores/notification_message.js'
 
+  import { Users } from '../../../middleware/database/users'
+
   const signupConstraints = {
     name: {
       presence: true,
@@ -77,10 +79,17 @@
     disableAction = true
     validateLoginForm()
     if (validateLoginForm()) {
-      const { user } = await Auth.createUserWithEmailAndPassword(email, password)
-      if (user) {
-        const createCompany = Functions.httpsCallable('createCompany')
-        createCompany({ companyName: name })
+      Auth.createUserWithEmailAndPassword(email, password)
+        .then(registeredUser => {
+          const userInfo = {
+            uid: registeredUser.user.uid,
+            name: name,
+            email: email,
+            role: "user",
+            active: true
+          }
+          const createEmployee = Functions.httpsCallable('createEmployee')
+          createEmployee(userInfo)
           .then(() => {
             notificationMessage.set({
               message: 'Your account was created successfully. Please log in',
@@ -92,12 +101,10 @@
             })
           })
           .catch(error => {
-            notificationMessage.set({ message: error.message, type: 'danger-toast' })
-            console.log(error)
-          })
-      }
-    } else {
-      disableAction = false
+              notificationMessage.set({ message: error.message, type: 'danger-toast' })
+              console.log(error)
+            })
+        })
     }
   }
 </script>

@@ -10,7 +10,8 @@ Auth.onAuthStateChanged(() => {
     }
 
     Users.findOne(Auth.currentUser.uid).then(doc => {
-      userInfo.name = doc.data().name
+      // console.log(doc.data())
+      // userInfo.name = doc.data().name
 
       Auth.currentUser.getIdTokenResult().then(idToken => {
         userInfo.isAdmin = idToken.claims.role === 'admin' || idToken.claims.role === 'superAdmin'

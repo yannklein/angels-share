@@ -17,7 +17,7 @@ service cloud.firestore {
       allow update, delete: if companyAdmin()
     }
 
-    match /users/userId} {
+    match /users/{userId} {
       allow read: if isSignedIn();
       allow create: if userAndAdmin();
       allow update, delete: if userAndAdmin()
