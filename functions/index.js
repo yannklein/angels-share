@@ -5,45 +5,50 @@ const firestore = admin.firestore()
 firestore.settings({ timestampsInSnapshots: true })
 
 exports.createUser = functions.region('europe-west1').https.onCall(async (data, context) => {
-  const Users = firestore.collection('users')
+  const userInfo = data;
 
-  if (!context.auth && !context.auth.uid && !context.auth.token.role === 'admin') {
-    throw new functions.https.HttpsError('unauthenticated')
-  }
+  firestore.collection('users').add(userInfo)
 
-  const userData = data
+  // if (!context.auth && !context.auth.uid && !context.auth.token.role === 'admin') {
+  //   throw new functions.https.HttpsError('unauthenticated')
+  // }
 
-  // if (!userData || !userData.email || !userData.name || !userData.password) {
+  // const userData = data
+
+  // // if (!userData || !userData.email || !userData.name || !userData.password) {
+  // //   throw new functions.https.HttpsError('not-found')
+  // // }
+
+  // const newUser = await admin.auth().createUser({
+  //   email: userData.email,
+  //   name: userData.name,
+  //   role: 'user',
+  //   active: true,
+  //   createdAt: new Date(),
+  //   createdBy: context.auth.uid
+  // })
+
+  // if (!newUser) {
   //   throw new functions.https.HttpsError('not-found')
   // }
 
-  const newUser = await admin.auth().createUser({
-    email: employeeData.email,
-    displayName: employeeData.name,
-    password: employeeData.password
-  })
+  // admin.auth().setCustomUserClaims(newUser.uid, {
+  //   role: 'user'
+  // })
 
-  if (!newUser) {
-    throw new functions.https.HttpsError('not-found')
-  }
+  // const newUserInfo = {
+  //   id: newUser.uid,
+  //   email: employeeData.email,
+  //   name: employeeData.name,
+  //   role: 'user',
+  //   active: true,
+  //   createdAt: new Date(),
+  //   createdBy: context.auth.uid
+  // }
 
-  admin.auth().setCustomUserClaims(newUser.uid, {
-    role: 'user'
-  })
-
-  const newUserInfo = {
-    id: newUser.uid,
-    email: employeeData.email,
-    name: employeeData.name,
-    role: 'user',
-    active: true,
-    createdAt: new Date(),
-    createdBy: context.auth.uid
-  }
-
-  return Users.doc(newUser.uid)
-    .set(newUserInfo)
-    .then(() => {
-      return 'ok'
-    })
+  // return Users.doc(newUser.uid)
+  //   .set(newUserInfo)
+  //   .then(() => {
+  //     return 'ok'
+  //   })
 })

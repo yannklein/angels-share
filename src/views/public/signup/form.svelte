@@ -86,10 +86,12 @@
             name: name,
             email: email,
             role: "user",
-            active: true
+            active: true,
+            createdAt: new Date(),
+            createdBy: context.auth.uid
           }
-          const createEmployee = Functions.httpsCallable('createEmployee')
-          createEmployee(userInfo)
+          const createUser = Functions.httpsCallable('createUser')
+          createUser(userInfo)
           .then(() => {
             notificationMessage.set({
               message: 'Your account was created successfully. Please log in',
