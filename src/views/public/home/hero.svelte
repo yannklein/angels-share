@@ -3,43 +3,87 @@
 </script>
 
 <style>
-  .hero {
-    background-image: url('images/hamburg_bridge.jpeg');
-    background-size: cover;
+  .hero-container {
+    padding: 64px 160px;
+    color: white;
   }
-  .hero-body h1,
-  .hero-body h2 {
-    color: #fff;
+  .hero-container h1 {
+    color: white;
+    margin-bottom: 64px;
   }
+  .hero-container .highlighted {
+    text-shadow: 0 0 16px white;
+    font-weight: bold;
+  }
+  .hero-container h3 {
+    margin: 0;
+    color: white;
+  }
+  .hero-container .steps * {
+    font-size: 24px;
+    margin: 0;
+  }
+  /*.hero-container ol {
+    font-size: 24px;
+  }*/
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero-btn-white {
+    padding: 24px 48px;
+    border-radius: 8px;
+    background-color: white;
+    color: #607d8b;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 1200px) {
+    .hero-container h1 {
+      font-size: 40px;
+    }
+    .hero-container .steps * {
+      font-size: 16px;
+    }
+    .hero-btn-white {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .hero-container {
+      padding: 64px;
+    }
+    .hero-container h1 {
+      font-size: 40px;
+    }
+    .hero-btn-white {
+      /*font-size: 16px;*/
+    }
+  }
+
+  @media (max-width: 700px) {
+    .hero-container .steps {
+      display: none;
+    }
+  }
+
 </style>
 
-<div id="index-banner" class="parallax-container">
-  <div class="section no-pad-bot">
-    <div class="container">
-      <br />
-      <br />
-      <h1 class="header light-green-text">Svelte & Firebase</h1>
-      <div class="row">
-        <h5 class="header col s12 light white-text">
-          A free template that you can use to create new applications using Svelte and Firebase
-        </h5>
-      </div>
-      <div class="row center">
-        <a
-          href="https://github.com/jorgegorka/svelte-firebase"
-          id="download-button"
-          class="btn-large waves-effect waves-light light-green lighten-1"
-          title="Download the template">
-          <i class="material-icons left">cloud_download</i>
-          Download
-        </a>
-      </div>
-      <br />
-      <br />
-
+<div class="hero-container primary-toast">
+  <h1>A no-commitment, über simple way to <span class="highlighted">help others</span></h1>
+  <div class="hero-content">
+    <div class="steps">
+      <p>3 Steps:</p>
+      <ol>
+        <li>Become an Angel's member</li>
+        <li>Get a NGO donation request message every month</li>
+        <li>Convinced by the NGO pitch? Give $50</li>
+      </ol>
     </div>
+    <a href="/login" class="hero-btn-white font-amatic">Let's go!</a>
   </div>
-  <div class="parallax">
-    <img src="/images/ebro_river.jpg" alt="A template to learn svelte and firebase" />
-  </div>
+
 </div>
