@@ -38,6 +38,10 @@
     color: #607d8b;
     font-size: 32px;
     font-weight: bold;
+    transition: box-shadow 3s;
+  }
+  .hero-btn-white:hover {
+    box-shadow: 0 0 120px 120px rgb(255 255 255 / 40%);
   }
 
   @media (max-width: 1200px) {

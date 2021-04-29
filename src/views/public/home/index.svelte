@@ -32,33 +32,5 @@
   <Menu />
   <Hero />
   <MainFeatures />
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot all-width">
-      <div class="container ">
-        <div class="row center">
-          <h2 class="col s12 light pink-text">Amazing technologies ready to use</h2>
-        </div>
-      </div>
-    </div>
-    <div class="parallax">
-      <img src="/images/almond.jpg" alt="Svelte & Firebase web development template" />
-    </div>
-  </div>
-  <Technology />
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot all-width">
-      <div class="container">
-        <div class="row center">
-          <h2 class="header col s12 light pink-text">How to use it</h2>
-        </div>
-      </div>
-    </div>
-    <div class="parallax">
-      <img src="/images/waterfall.jpg" alt="Svelte & Firebase is licensed under MIT" />
-    </div>
-  </div>
-  <HowToUseIt />
   <Footer />
 </div>
