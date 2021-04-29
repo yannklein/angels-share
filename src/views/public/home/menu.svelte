@@ -2,11 +2,16 @@
   .navbar-item {
     color: #444;
   }
+  #logo {
+    height: 100%;
+    margin: 8px 0;
+  }
 </style>
 
 <nav class="white" role="navigation">
   <div class="nav-wrapper container">
-    <a id="logo-container" href="/" class="brand-logo light-green-text">Svelte & Firebase</a>
+    <img id="logo" src="/favicon.svg" alt="logo">
+    <a id="logo-container" href="/" class="brand-logo light-green-text">The Angel's Share</a>
     <ul class="right hide-on-med-and-down">
       <li>
         <a href="/" class="navbar-item active">Home</a>

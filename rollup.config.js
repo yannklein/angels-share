@@ -21,6 +21,7 @@ export default {
       dev: !production,
       // we'll extract any component CSS out into
       // a separate file — better for performance
+      emitCss: true,
       css: css => {
         css.write('public/bundle.css')
       }
