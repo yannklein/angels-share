@@ -158,11 +158,11 @@
   <span class="card-title center-align">Where should we send you donation messages?</span>
   <CheckBox
     bind:checked={email_subs}
-    id="email"
+    id="email_subs_chbox"
     label="Send via e-mail" />
   <CheckBox
     bind:checked={line_subs}
-    id="line"
+    id="line_subs_chbox"
     label="Send via Line" />
   <TextInput
     bind:value={line_id}
@@ -171,7 +171,7 @@
     errorMessage={lineMessage} />
   <CheckBox
     bind:checked={whatsapp_subs}
-    id="whatsapp"
+    id="whatsapp_subs_chbox"
     label="Send via Whatsapp" />
   <TextInput
     bind:value={whatsapp_id}
