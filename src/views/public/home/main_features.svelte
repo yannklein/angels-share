@@ -6,6 +6,7 @@
   }
   .features-container h2 {
     margin-bottom: 80px;
+    color: white;
   }
   .reasons {
     display: flex;
@@ -13,7 +14,7 @@
     align-items: center;
   }
   .reasons-card {
-    color: #607d8b;
+    color: white;
     font-size: 24px;
   }
   .reasons-card p {
@@ -33,7 +34,7 @@
   }
 </style>
 
-<div class="features-container">
+<div class="features-container  primary-toast">
   <h2>If you want to help people 💪</h2>
   <div class="reasons">
     <div class="reasons-card">

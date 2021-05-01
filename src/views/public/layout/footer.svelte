@@ -2,14 +2,19 @@
   .footer-container {
     padding-top: 0px;
     padding: 32px 160px;
-    color: white;
+    color: #607d8b;
   }
   .footer-container a {
-    color: lightgray;
+    color: black;
+  }
+  @media (max-width: 1000px) {
+    .footer-container {
+      padding: 64px;
+    }
   }
 </style>
 
-<div class="footer-container primary-toast">
+<div class="footer-container">
   <span>
     Made with <i class="fas fa-heart"></i> by
     <a href="https://www.yannklein.me">Yann Klein</a>

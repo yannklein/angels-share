@@ -3,6 +3,7 @@
   import Menu from './menu.svelte'
   import Hero from './hero.svelte'
   import MainFeatures from './main_features.svelte'
+  import FeaturedNgo from './featured_ngo.svelte'
   import Footer from '../layout/footer.svelte'
 
   onMount(() => {
@@ -29,6 +30,7 @@
 <div>
   <Menu />
   <Hero />
+  <FeaturedNgo />
   <MainFeatures />
   <Footer />
 </div>
