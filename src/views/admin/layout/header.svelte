@@ -27,10 +27,10 @@
   }
 </style>
 
-<nav class="teal lighten-1">
+<nav class="primary-toast lighten-1">
   <div class="nav-wrapper">
     <a href="/admin/" class="brand-logo">
-      Svelte & Firebase
+      Your subscription dashboard
       <i class="material-icons left">web</i>
     </a>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger">
@@ -60,18 +60,6 @@
     <Navigate to="/admin/">
       Dashboard
       <i class="material-icons left">dashboard</i>
-    </Navigate>
-  </li>
-  <li>
-    <Navigate to="/admin/teams">
-      Teams
-      <i class="material-icons left">group_work</i>
-    </Navigate>
-  </li>
-  <li>
-    <Navigate to="/admin/employees">
-      Employees
-      <i class="material-icons left">person_pin</i>
     </Navigate>
   </li>
   <li>

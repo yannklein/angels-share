@@ -7,9 +7,13 @@
   import PasswordInput from '../../components/forms/password_input.svelte'
   import EmailInput from '../../components/forms/email_input.svelte'
   import FormButtons from '../../components/forms/buttons.svelte'
+  import CheckBox from '../../components/forms/check_box.svelte'
+
   import { notificationMessage } from '../../../stores/notification_message.js'
 
   import { Users } from '../../../middleware/database/users'
+
+  import { currentUser } from '../../../stores/current_user'
 
   const signupConstraints = {
     name: {
@@ -43,6 +47,19 @@
   let passwordError = false
   let disableAction = false
 
+  let email_subs = false
+  let whatsapp_subs = false
+  let line_subs = false
+
+  let whatsapp_id = ""
+  let line_id = ""
+
+  let lineError = false
+  let lineMessage = ""
+
+  let whatsappError = false
+  let whatsappMessage = ""
+
   const resetErrorInfo = () => {
     let nameError = false
     let nameMessage = ''
@@ -54,6 +71,16 @@
 
   const validateLoginForm = () => {
     resetErrorInfo()
+    if (line_subs && line_id === "") {
+      lineMessage = "Line ID needed!"
+      lineError = true
+      return false
+    }
+    if (whatsapp_subs && whatsapp_id === "") {
+      whatsappMessage = "Phone number needed!"
+      whatsappError = true
+      return false
+    }
     const validationResult = validate({ name, email, password }, signupConstraints)
     if (!validationResult) {
       return true
@@ -87,20 +114,27 @@
             email: email,
             role: "user",
             active: true,
+            email_subs: email_subs,
+            whatsapp_subs: whatsapp_subs,
+            line_subs: line_subs,
+            whatsapp_id: whatsapp_id,
+            line_id: line_id,
             createdAt: new Date(),
-            createdBy: context.auth.uid
+            createdBy: registeredUser.user.uid
           }
           const createUser = Functions.httpsCallable('createUser')
           createUser(userInfo)
           .then(() => {
             notificationMessage.set({
-              message: 'Your account was created successfully. Please log in',
+              message: 'Your account was created successfully!',
               type: 'success-toast'
             })
-            // We logout the user to generate a new jwt with right token info
-            Auth.signOut().then(() => {
-              navigateTo('/login')
-            })
+            currentUser.set(userInfo);
+
+            navigateTo('/admin')
+            // // We logout the user to generate a new jwt with right token info
+            // Auth.signOut().then(() => {
+            // })
           })
           .catch(error => {
               notificationMessage.set({ message: error.message, type: 'danger-toast' })
@@ -121,5 +155,28 @@
     errorMessage={nameMessage} />
   <EmailInput bind:value={email} error={emailError} errorMessage={emailMessage} />
   <PasswordInput bind:value={password} error={passwordError} errorMessage={passwordMessage} />
+  <span class="card-title center-align">Where should we send you donation messages?</span>
+  <CheckBox
+    bind:checked={email_subs}
+    id="email"
+    label="Send via e-mail" />
+  <CheckBox
+    bind:checked={line_subs}
+    id="line"
+    label="Send via Line" />
+  <TextInput
+    bind:value={line_id}
+    error={lineError}
+    label="Your line ID"
+    errorMessage={lineMessage} />
+  <CheckBox
+    bind:checked={whatsapp_subs}
+    id="whatsapp"
+    label="Send via Whatsapp" />
+  <TextInput
+    bind:value={whatsapp_id}
+    error={whatsappError}
+    label="Your phone number for Whatsapp"
+    errorMessage={whatsappMessage} />
   <FormButtons cancelButton={false} submitText="Create account" isLoading={disableAction} />
 </form>

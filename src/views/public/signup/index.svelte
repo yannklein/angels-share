@@ -17,14 +17,13 @@
         <div class="card card-login">
           <div class="card-login-splash">
             <div class="wrapper">
-              <h3 class="center-align mt10">Svelte & Firebase</h3>
+              <h3 class="center-align mt10">One step away from becoming an angel 🕊</h3>
             </div>
           </div>
           <div class="card-content">
-            <span class="card-title center-align">Create your account</span>
             <SignupForm />
             <p>
-              <Navigate to="login">Already have an account? Log in</Navigate>
+              <Navigate to="login"><span style="color:black">Already have an account? Log in</span></Navigate>
             </p>
           </div>
         </div>

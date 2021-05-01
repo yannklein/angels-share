@@ -21,6 +21,10 @@
   .cancel {
     margin-right: 1em;
   }
+  button {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
 </style>
 
 <div class="field form-buttons">
@@ -42,6 +46,6 @@
       </div>
     </div>
   {:else}
-    <button type="submit" class="btn green darken-1">{submitText} </button>
+    <button type="submit" class="btn primary-toast font-amatic">{submitText}</button>
   {/if}
 </div>

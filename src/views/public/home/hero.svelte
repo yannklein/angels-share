@@ -87,7 +87,7 @@
         <li>Convinced by the NGO pitch? Give $50</li>
       </ol>
     </div>
-    <a href="/login" class="hero-btn-white font-amatic">Let's go!</a>
+    <a href="/signup" class="hero-btn-white font-amatic">Let's go!</a>
   </div>
 
 </div>

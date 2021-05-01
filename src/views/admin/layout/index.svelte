@@ -35,6 +35,8 @@
   onDestroy(() => {
     unsubscribe()
   })
+
+  console.log($currentUser.id)
 </script>
 
 {#if !showPage}

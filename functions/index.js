@@ -8,47 +8,24 @@ exports.createUser = functions.region('europe-west1').https.onCall(async (data, 
   const userInfo = data;
 
   firestore.collection('users').add(userInfo)
-
-  // if (!context.auth && !context.auth.uid && !context.auth.token.role === 'admin') {
-  //   throw new functions.https.HttpsError('unauthenticated')
-  // }
-
-  // const userData = data
-
-  // // if (!userData || !userData.email || !userData.name || !userData.password) {
-  // //   throw new functions.https.HttpsError('not-found')
-  // // }
-
-  // const newUser = await admin.auth().createUser({
-  //   email: userData.email,
-  //   name: userData.name,
-  //   role: 'user',
-  //   active: true,
-  //   createdAt: new Date(),
-  //   createdBy: context.auth.uid
-  // })
-
-  // if (!newUser) {
-  //   throw new functions.https.HttpsError('not-found')
-  // }
-
-  // admin.auth().setCustomUserClaims(newUser.uid, {
-  //   role: 'user'
-  // })
-
-  // const newUserInfo = {
-  //   id: newUser.uid,
-  //   email: employeeData.email,
-  //   name: employeeData.name,
-  //   role: 'user',
-  //   active: true,
-  //   createdAt: new Date(),
-  //   createdBy: context.auth.uid
-  // }
-
-  // return Users.doc(newUser.uid)
-  //   .set(newUserInfo)
-  //   .then(() => {
-  //     return 'ok'
-  //   })
 })
+
+// exports.editUser = functions.region('europe-west1').https.onCall(async (data, context) => {
+//   const userInfo = data;
+
+//   firestore.document(`/users/${userInfo.uid}`)
+//     .onCreate((snap, context) => {
+//       // Grab the current value of what was written to Firestore.
+//       const original = snap.data().original;
+
+//       // Access the parameter `{documentId}` with `context.params`
+//       functions.logger.log('Uppercasing', context.params.documentId, original);
+
+//       const uppercase = original.toUpperCase();
+
+//       // You must return a Promise when performing asynchronous tasks inside a Functions such as
+//       // writing to Firestore.
+//       // Setting an 'uppercase' field in Firestore document returns a Promise.
+//       return snap.ref.set({uppercase}, {merge: true});
+//     });
+// })
