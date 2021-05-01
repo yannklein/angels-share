@@ -1,16 +1,12 @@
 <style>
   .footer-container {
-    padding-top: 0px;
-    padding: 32px 160px;
+    padding: 32px 0;
     color: #607d8b;
+    display: flex;
+    justify-content: center;
   }
   .footer-container a {
     color: black;
-  }
-  @media (max-width: 1000px) {
-    .footer-container {
-      padding: 64px;
-    }
   }
 </style>
 

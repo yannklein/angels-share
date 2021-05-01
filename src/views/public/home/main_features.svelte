@@ -16,6 +16,7 @@
   .reasons-card {
     color: white;
     font-size: 24px;
+    width: 300px;
   }
   .reasons-card p {
     margin: 0;
