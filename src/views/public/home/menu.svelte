@@ -106,12 +106,12 @@
     <h2 class="navbar-vanilla-brand">The Angel's Share</h2>
   </a>
   <div class="navbar-vanilla-section">
-    <div class="navbar-vanilla-profile" class:active="{isActive}">
+    <!-- <div class="navbar-vanilla-profile" class:active="{isActive}">
       <img src="https://avatars2.githubusercontent.com/u/26819547?s=400&amp;u=ae79d8825ad1127723641cbf32a9a7e2ec221e7f&amp;v=4" alt="" on:click={handleClick}>
       <ul>
         <li><a href="/login">Your space</a></li>
         <li><a href="http://www.yannklein.me">About the author</a></li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </div>
