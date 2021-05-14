@@ -21,7 +21,7 @@
     }
   })
 
-  $: if (!$currentUser) {
+  $: if (Object.keys($currentUser).length === 0) {
     showPage = false
   } else {
     if ($currentUser.id === 0) {
@@ -29,14 +29,14 @@
       navigateTo('/login')
     } else {
       showPage = true
+      console.log($currentUser)
     }
   }
 
   onDestroy(() => {
     unsubscribe()
   })
-
-  console.log($currentUser.id)
+  
 </script>
 
 {#if !showPage}
@@ -47,6 +47,7 @@
     <Header />
     <main>
       <div class="row">
+        <p>Hello, {$currentUser.name}!</p>
         <div class="col s3 hide-on-med-and-down">
           <Sidebar currentUser={$currentUser} />
         </div>

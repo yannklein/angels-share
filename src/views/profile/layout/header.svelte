@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte'
   import { Navigate } from 'svelte-router-spa'
+  import { notificationMessage } from '../../../stores/notification_message.js'
 
   import { Auth } from '../../../config/firebase'
 
@@ -29,7 +30,7 @@
 
 <nav class="primary-toast lighten-1">
   <div class="nav-wrapper">
-    <a href="/admin/" class="brand-logo">
+    <a href="/profile/" class="brand-logo">
       Your subscription dashboard
       <i class="material-icons left">web</i>
     </a>
@@ -57,7 +58,7 @@
 </nav>
 <ul class="sidenav" id="mobile-demo">
   <li>
-    <Navigate to="/admin/">
+    <Navigate to="/profile/">
       Dashboard
       <i class="material-icons left">dashboard</i>
     </Navigate>

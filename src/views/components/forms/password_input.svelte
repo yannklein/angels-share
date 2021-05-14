@@ -1,12 +1,12 @@
 <script>
   export let inputName = 'password'
   export let id = 'password'
-  export let label = 'Contraseña'
+  export let label = 'Password'
   export let value = ''
   export let icon = 'lock'
   export let error = false
   export let isFocused = false
-  export let errorMessage = 'Por favor, añade una contraseña'
+  export let errorMessage = 'Missing your password ;)'
   export let helpText = ''
 </script>
 

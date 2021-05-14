@@ -4,20 +4,25 @@ import { Users } from '../database/users'
 
 Auth.onAuthStateChanged(() => {
   if (Auth.currentUser) {
-    const userInfo = {
-      email: Auth.currentUser.email,
-      id: Auth.currentUser.uid
-    }
+    // const userInfo = {
+    //   email: Auth.currentUser.email,
+    //   id: Auth.currentUser.uid
+    // }
 
-    Users.findOne(Auth.currentUser.uid).then(doc => {
-      // console.log(doc.data())
-      // userInfo.name = doc.data().name
+    // console.log("id:", Auth.currentUser.uid)
 
-      Auth.currentUser.getIdTokenResult().then(idToken => {
-        userInfo.isAdmin = idToken.claims.role === 'admin' || idToken.claims.role === 'superAdmin'
-
-        currentUser.set(userInfo)
-      })
+    Users.findByUserId(Auth.currentUser.uid).then(querySnapshot => {
+      querySnapshot.forEach((doc) => {
+        const userInfo = doc.data()
+        
+        Auth.currentUser.getIdTokenResult().then(idToken => {
+          userInfo.isAdmin = idToken.claims.role === 'admin' || idToken.claims.role === 'superAdmin'
+          
+          // console.log({userInfo});
+          currentUser.set(userInfo)
+          // console.log({currentUser});
+        })
+      });
     })
   } else {
     currentUser.set({ id: 0 })

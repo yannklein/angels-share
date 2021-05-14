@@ -22,7 +22,7 @@ const usersDb = () => {
   }
 
   const findByUserId = userId => {
-    return FirebaseUsers.where('userId', '==', userId).get()
+    return FirebaseUsers.where('uid', '==', userId).limit(1).get()
   }
 
   const findAll = (active = true) => {

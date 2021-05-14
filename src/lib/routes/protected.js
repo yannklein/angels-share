@@ -1,10 +1,10 @@
-import AdminLayout from '../../views/admin/layout/index.svelte'
-import DashboardIndex from '../../views/admin/dashboard/index.svelte'
+import ProfileLayout from '../../views/profile/layout/index.svelte'
+import DashboardIndex from '../../views/profile/dashboard/index.svelte'
 
 const protectedRoutes = [
   {
-    name: 'admin',
-    component: AdminLayout,
+    name: 'profile',
+    component: ProfileLayout,
     nestedRoutes: [
       { name: 'index', component: DashboardIndex }
     ]

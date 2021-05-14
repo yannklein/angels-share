@@ -131,7 +131,7 @@
             })
             currentUser.set(userInfo);
 
-            navigateTo('/admin')
+            navigateTo('/profile')
             // // We logout the user to generate a new jwt with right token info
             // Auth.signOut().then(() => {
             // })
