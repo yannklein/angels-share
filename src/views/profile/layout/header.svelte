@@ -4,6 +4,7 @@
   import { notificationMessage } from '../../../stores/notification_message.js'
 
   import { Auth } from '../../../config/firebase'
+  export let currentUser = {}
 
   onMount(() => {
     const sideNav = document.querySelectorAll('.sidenav')
@@ -31,7 +32,7 @@
 <nav class="primary-toast lighten-1">
   <div class="nav-wrapper">
     <a href="/profile/" class="brand-logo">
-      Your subscription dashboard
+      Hi {currentUser.name} 🕊
       <i class="material-icons left">web</i>
     </a>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger">

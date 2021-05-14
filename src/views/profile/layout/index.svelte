@@ -44,10 +44,9 @@
 {:else}
   <div>
     <Notification {notification} {visible} />
-    <Header />
+    <Header currentUser={$currentUser}/>
     <main>
       <div class="row">
-        <p>Hello, {$currentUser.name}!</p>
         <div class="col s3 hide-on-med-and-down">
           <Sidebar currentUser={$currentUser} />
         </div>
