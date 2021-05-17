@@ -5,7 +5,6 @@
   export let value = ''
   export let icon = 'email'
   export let error = false
-  export let isFocused = false
   export let errorMessage = 'Please enter a valid email'
 </script>
 
@@ -21,7 +20,6 @@
     {id}
     class="validate"
     class:invalid={error}
-    autofocus={isFocused}
     on:blur />
   <label for={id}>{label}</label>
   <span class="helper-text" data-error={errorMessage} />

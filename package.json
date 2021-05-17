@@ -22,7 +22,8 @@
     "dev": "run-p start:dev autobuild",
     "start": "sirv public",
     "start:dev": "sirv public -s --dev",
-    "deploy": "yarn build && firebase deploy"
+    "deploy": "yarn build && firebase deploy",
+    "fct-deploy": "firebase deploy --only functions"
   },
   "dependencies": {
     "firebase": "^7.0.0",

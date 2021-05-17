@@ -1,7 +1,9 @@
 <script>
   import SidebarMenu from './menu.svelte'
   export const currentUser = {}
-  let userMenuItems = [{ to: '/profile/', icon: 'dashboard', title: 'Dashboard' }]
+  let userMenuItems = [
+    { to: '/', icon: 'home', title: 'Home' },
+    { to: '/profile/', icon: 'dashboard', title: 'Dashboard' }]
 </script>
 
 <style>
