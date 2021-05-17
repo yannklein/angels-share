@@ -39,8 +39,21 @@
   
 </script>
 
+<style>
+  .text-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+  }
+</style>
+
 {#if !showPage}
+<div class="text-middle">
   <Loading />
+</div>
 {:else}
   <div>
     <Notification {notification} {visible} />
