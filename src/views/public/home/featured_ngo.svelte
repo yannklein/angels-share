@@ -5,7 +5,8 @@
   }
   .featured-ngo-container h2 {
     margin: 0;
-    margin-bottom: 32px;
+    margin-top: 48px;
+    margin-bottom: 102px;
     text-align: center;
   }
   .featured-ngo {
@@ -48,6 +49,7 @@
     width: 100%;
     height: 100%;
     min-height: 400px;
+    box-shadow: 0 0 16px #607d8b;
   }
   @media (max-width: 1000px) {
     .featured-ngo-container {
