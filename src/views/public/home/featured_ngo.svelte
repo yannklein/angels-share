@@ -38,6 +38,7 @@
     object-fit: cover;
     height: 100%;
     margin-left: 16px;
+    padding: 4px;
   }
   .featured-ngo-icon {
     font-size: 120px;
@@ -46,6 +47,7 @@
   .featured-ngo iframe {
     width: 100%;
     height: 100%;
+    min-height: 400px;
   }
   @media (max-width: 1000px) {
     .featured-ngo-container {
@@ -64,15 +66,16 @@
 </style>
 
 <div class="featured-ngo-container">
-  <h2>This month's NGO 🇱🇧</h2>
+  <h2>This month's NGO 🇾🇪</h2>
   <div class="featured-ngo">
     <div class="featured-ngo-card">
       <div class="featured-ngo-card-title">
-        <h3>Baytna Baytak</h3>
-        <img src="https://baytnabaytak.com/wp-content/uploads/2021/01/Baytna-Baytak-Loog-1-02.png" alt="ngo logo">
+        <h3>WPF for Yemen</h3>
+        <img src="https://www.wfp.org/themes/custom/wfp_org/images/logos/UNWFP-logo-vertical-white-en.svg?v=3" alt="ngo logo">
       </div>
-      <p>Baytna Baytak is a social initiative launched by young, dynamic, and independent Lebanese individuals. Their mission was primarily to secure housing for healthcare professionals working at the forefront of the fight against the Covid-19 pandemic.</p>
+      <p>The current level of hunger in Yemen is unprecedented and is causing severe hardship for millions of people. Despite ongoing humanitarian assistance, 16.2 million Yemenis are food insecure.</p>
+      <p>Aiming to feed 13 million of the most vulnerable people each month, WFP’s emergency response in Yemen is our largest anywhere in the world.</p> 
     </div>
-    <iframe src="https://baytnabaytak.com/" frameborder="0"></iframe>
+    <iframe src="https://www.wfpusa.org/countries/yemen/" frameborder="0"></iframe>
   </div>
 </div>
