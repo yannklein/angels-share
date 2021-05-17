@@ -1,13 +1,12 @@
+<script>
+</script>
+
 <style>
   .featured-ngo-container {
-    padding: 64px;
     color: white;
   }
   .featured-ngo-container h2 {
-    margin: 0;
-    margin-top: 48px;
-    margin-bottom: 102px;
-    text-align: center;
+    margin: 64px 0;
   }
   .featured-ngo {
     display: flex;
@@ -31,13 +30,14 @@
     margin: 0;
     margin-bottom: 32px;
   }
+
   .featured-ngo-card-title h3 {
     margin: 0;
   }
   .featured-ngo-card-title img {
     background-color: #607d8b;
     object-fit: cover;
-    height: 100%;
+    height: 2.5em;
     margin-left: 16px;
     padding: 4px;
   }
@@ -66,18 +66,21 @@
 
   }
 </style>
-
-<div class="featured-ngo-container">
-  <h2>This month's NGO 🇾🇪</h2>
-  <div class="featured-ngo">
-    <div class="featured-ngo-card">
-      <a class="featured-ngo-card-title" href="https://www.wfpusa.org/countries/yemen/">
-        <h3>WPF for Yemen</h3>
-        <img src="https://www.wfp.org/themes/custom/wfp_org/images/logos/UNWFP-logo-vertical-white-en.svg?v=3" alt="ngo logo">
-      </a>
-      <p>The current level of hunger in Yemen is unprecedented and is causing severe hardship for millions of people. Despite ongoing humanitarian assistance, 16.2 million Yemenis are food insecure.</p>
-      <p>Aiming to feed 13 million of the most vulnerable people each month, WFP’s emergency response in Yemen is our largest anywhere in the world.</p> 
+<div class="masonry row">
+  <div class="col s11">
+  <div class="featured-ngo-container">
+    <h2>This month's NGO</h2>
+    <div class="featured-ngo">
+      <div class="featured-ngo-card">
+        <a class="featured-ngo-card-title" href="https://www.wfpusa.org/countries/yemen/">
+          <h3>WPF for Yemen</h3>
+          <img src="https://www.wfp.org/themes/custom/wfp_org/images/logos/UNWFP-logo-vertical-white-en.svg?v=3" alt="ngo logo">
+        </a>
+        <p>The current level of hunger in Yemen is unprecedented and is causing severe hardship for millions of people. Despite ongoing humanitarian assistance, 16.2 million Yemenis are food insecure.</p>
+        <p>Aiming to feed 13 million of the most vulnerable people each month, WFP’s emergency response in Yemen is our largest anywhere in the world.</p> 
+      </div>
+      <iframe title="ngo preview" src="https://www.wfpusa.org/countries/yemen/" frameborder="0"></iframe>
     </div>
-    <iframe title="ngo preview" src="https://www.wfpusa.org/countries/yemen/" frameborder="0"></iframe>
+  </div>
   </div>
 </div>

@@ -3,7 +3,8 @@
   export const currentUser = {}
   let userMenuItems = [
     { to: '/', icon: 'home', title: 'Home' },
-    { to: '/profile/', icon: 'dashboard', title: 'Dashboard' }]
+    { to: '/profile/', icon: 'dashboard', title: 'Dashboard' },
+    { to: 'profile/ngo/', icon: 'volunteer_activism', title: 'Featured NGO' }]
 </script>
 
 <style>
