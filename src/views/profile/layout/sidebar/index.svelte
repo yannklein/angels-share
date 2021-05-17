@@ -1,6 +1,6 @@
 <script>
   import SidebarMenu from './menu.svelte'
-  export let currentUser = {}
+  export const currentUser = {}
   let userMenuItems = [{ to: '/profile/', icon: 'dashboard', title: 'Dashboard' }]
 </script>
 

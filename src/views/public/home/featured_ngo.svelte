@@ -40,10 +40,10 @@
     margin-left: 16px;
     padding: 4px;
   }
-  .featured-ngo-icon {
+  /* .featured-ngo-icon {
     font-size: 120px;
     margin: 0;
-  }
+  } */
   .featured-ngo iframe {
     width: 100%;
     height: 100%;
@@ -76,6 +76,6 @@
       <p>The current level of hunger in Yemen is unprecedented and is causing severe hardship for millions of people. Despite ongoing humanitarian assistance, 16.2 million Yemenis are food insecure.</p>
       <p>Aiming to feed 13 million of the most vulnerable people each month, WFP’s emergency response in Yemen is our largest anywhere in the world.</p> 
     </div>
-    <iframe src="https://www.wfpusa.org/countries/yemen/" frameborder="0"></iframe>
+    <iframe title="ngo preview" src="https://www.wfpusa.org/countries/yemen/" frameborder="0"></iframe>
   </div>
 </div>

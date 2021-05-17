@@ -1,7 +1,7 @@
 <style>
-  .navbar-item {
+  /* .navbar-item {
     color: #444;
-  }
+  } */
   .navbar-vanilla {
     display: flex;
     height: 96px;
@@ -34,16 +34,16 @@
     font-size: 40px;
   }
 
-  .navbar-vanilla-menu a {
+  /* .navbar-vanilla-menu a {
     margin: 0 16px;
-  }
+  } */
 
   .navbar-vanilla-profile {
     position: relative;
     margin: 0 24px;
   }
 
-  .navbar-vanilla-profile img {
+  /* .navbar-vanilla-profile img {
     width: 64px;
     height: 64px;
     border-radius: 50%;
@@ -66,16 +66,16 @@
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
-  }
+  } */
 
-  .navbar-vanilla-profile li {
+  /* .navbar-vanilla-profile li {
     margin: 8px;
   }
 
   .navbar-vanilla-profile.active ul {
     opacity: 1;
     visibility: visible;
-  }
+  } */
 
   .navbar-vanilla-profile p {
     color: #607d8b;
@@ -86,9 +86,9 @@
       font-size: 24px;
     }
 
-    .navbar-vanilla-menu {
+    /* .navbar-vanilla-menu {
       display: none;
-    }
+    } */
 
   }
 </style>
@@ -101,7 +101,7 @@
 </script>
 
 <div class="navbar-vanilla">
-  <a class="navbar-vanilla-section" href="#">
+  <a class="navbar-vanilla-section" href="/">
     <img class="navbar-vanilla-logo" src="/favicon.svg" alt="logo">
     <h2 class="navbar-vanilla-brand">The Angel's Share</h2>
   </a>

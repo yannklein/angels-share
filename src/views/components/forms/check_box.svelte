@@ -1,7 +1,6 @@
 <script>
   export let id = 'checkbox'
   export let label = ''
-  export let group = 'radio'
   export let checked = false
 </script>
 
