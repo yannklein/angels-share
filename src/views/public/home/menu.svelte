@@ -94,6 +94,8 @@
 </style>
 
 <script>
+  export let loggedIn;
+  
   let isActive = false;
   function handleClick() {
     isActive = !isActive
@@ -107,7 +109,11 @@
   </a>
   <div class="navbar-vanilla-section">
     <div class="navbar-vanilla-profile" class:active="{isActive}">
+      {#if loggedIn}
+      <a href="/profile"><p>Profile</p></a>
+      {:else}
       <a href="/login"><p>Login</p></a>
+      {/if}
     </div>
   </div>
 </div>
