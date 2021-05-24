@@ -13,3 +13,30 @@ exports.editUser = functions.region('europe-west1').https.onCall(async (data, co
   const userInfo = data;
   firestore.collection('users').doc(userInfo.uid).update(userInfo)
 })
+
+exports.scheduledMail = functions.region('europe-west1').pubsub.schedule('11 0 1 * *')
+.timeZone('CET').onRun((context) => {
+  console.log('This will be run every months!');
+  firestore.collection('users').where('email_subs', '==', true).get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        const userInfo = doc.data()
+        // eslint-disable-next-line promise/no-nesting
+        firestore
+          .collection("mails")
+          .add({
+            to: userInfo.email,
+            message: {
+              subject: "Discover this month Angel's share NGO",
+              html: "Checkout the NGO details here. And jump there to donate.",
+            },
+          })
+          .then(() => console.log("Queued email for delivery!"))
+          .catch();
+      })
+      return null;
+    })
+    .catch();
+
+  return null;
+});
