@@ -6,8 +6,21 @@
   import FeaturedNgo from './featured_ngo.svelte'
   import Footer from '../layout/footer.svelte'
   import { currentUser } from '../../../stores/current_user';
+  import { currentNgo } from '../../../stores/ngo';
 
   let loggedIn = false;
+  let ngoLoaded = false;
+
+  currentNgo.init();
+
+  $: if (Object.keys($currentNgo).length === 0) {
+    console.log("ngo not loaded yet")
+    ngoLoaded = false;
+  } else {
+    console.log("ngo loaded", $currentNgo)
+    ngoLoaded = true;
+  }
+
   $: if (Object.keys($currentUser).length === 0) {
     console.log($currentUser)
     loggedIn = false
@@ -18,29 +31,13 @@
 
   onMount(() => {
     console.log('index -> on mount')
-    // const elems = document.querySelectorAll('.parallax')
-    // M.Parallax.init(elems, {})
   })
-
-  setTimeout(() => {
-    const elems = document.querySelectorAll('.parallax')
-    M.Parallax.init(elems, {})
-  }, 300)
 </script>
-
-<style>
-  .parallax {
-    height: 750px;
-  }
-  .all-width {
-    width: 100%;
-  }
-</style>
 
 <div>
   <Menu loggedIn={loggedIn}/>
   <Hero />
-  <FeaturedNgo />
+  <FeaturedNgo ngoLoaded={ngoLoaded} currentNgo={$currentNgo}/>
   <MainFeatures />
   <Footer />
 </div>

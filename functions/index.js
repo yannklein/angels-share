@@ -17,7 +17,10 @@ exports.editUser = functions.region('europe-west1').https.onCall(async (data, co
 exports.scheduledMail = functions.region('europe-west1').pubsub.schedule('11 0 1 * *')
 .timeZone('CET').onRun((context) => {
   console.log('This will be run every months!');
-  firestore.collection('users').where('email_subs', '==', true).get()
+  firestore
+    .collection('users')
+    .where('email_subs', '==', true)
+    .get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         const userInfo = doc.data()
