@@ -27,5 +27,28 @@
   "footer": {
     "made_with": "Fait avec ",
     "by": " par"
+  },
+  "profile": {
+    "dashboard": {
+      "title": "Tableau de bord",
+      "donation_status": "Les messages de donations vont être envoyés chaque mois ",
+      "setting_title": "Configuration des messages",
+      "setting_descr": "Selectionnez la manière pour nous de vous envoyer nos messages de donation:",
+      "mail_placeholder": "Entrez votre adresse mail!",
+      "id_placeholder": "Entrez votre ID/numéro de téléphone",
+      "saved_notif": "Enregistré!"
+    },
+    "sidebar": {
+      "home_icon": "Accueil",
+      "dashboard_icon": "Tableau de bord",
+      "npo_icon": "L'ONG du mois",
+      "main_menu": "Menu principal"
+    },
+    "header": {
+      "hi": "Bonjour",
+      "settings": "Réglages",
+      "log_out": "Déconnecter",
+      "dashboard": "Tableau de bord"
+    }
   }
 }

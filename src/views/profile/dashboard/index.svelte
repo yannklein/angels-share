@@ -4,6 +4,8 @@
   import { faEnvelope, faCheckCircle } from '@fortawesome/free-solid-svg-icons';
   import { faWhatsappSquare, faLine } from '@fortawesome/free-brands-svg-icons';
   import FormButtons from '../../components/forms/buttons.svelte'
+  import { _ } from '../../../locales/i18n';
+
 
   let updated = false;
 
@@ -85,17 +87,17 @@
 
 <div class="masonry row">
   <div class="col s8">
-    <h2>Dashboard</h2>
+    <h2>{$_('profile.dashboard.title')}</h2>
     <!-- {JSON.stringify($currentUser)} -->
-    <p>Donation messages will be sent every 1st of each month. <Icon class="icon-check-static" icon={faCheckCircle}/></p>
-    <h3>Message settings</h3>
-    <p>Select the way for us to send you our donatin suggestions:</p>
+    <p>{$_('profile.dashboard.donation_status')}<Icon class="icon-check-static" icon={faCheckCircle}/></p>
+    <h3>{$_('profile.dashboard.setting_title')}</h3>
+    <p>{$_('profile.dashboard.setting_descr')}</p>
     <div class="msg-setting" class:active={$currentUser.email_subs}>
       <div on:click={ () => {updateSetting('email_subs')}}>
         <Icon  class="icon icon-mail" icon={faEnvelope}/>
         <Icon class="icon-check" icon={faCheckCircle}/>
       </div>
-      <input on:change={(e) => updateId(e,'email')} type="text" value={$currentUser.email} placeholder="Enter your mail!">
+      <input on:change={(e) => updateId(e,'email')} type="text" value={$currentUser.email} placeholder={$_('profile.dashboard.mail_placeholder')}>
     </div>
     
     <div class="msg-setting"  class:active={$currentUser.line_subs}>
@@ -103,7 +105,7 @@
         <Icon  class="icon icon-line" icon={faLine}/>
         <Icon class="icon-check" icon={faCheckCircle}/>
       </div>
-      <input on:change={(e) => updateId(e,'line_id')} type="text" value={$currentUser.line_id} placeholder="Enter your ID!" >
+      <input on:change={(e) => updateId(e,'line_id')} type="text" value={$currentUser.line_id} placeholder={$_('profile.dashboard.id_placeholder')} >
 
     </div>
 
@@ -112,7 +114,7 @@
         <Icon class="icon icon-whatsapp" icon={faWhatsappSquare}/>
         <Icon class="icon-check" icon={faCheckCircle}/>
       </div>
-      <input on:change={(e) => updateId(e,'whatsapp_id')} type="text" value={$currentUser.whatsapp_id} placeholder="Enter your ID!" >
+      <input on:change={(e) => updateId(e,'whatsapp_id')} type="text" value={$currentUser.whatsapp_id} placeholder={$_('profile.dashboard.id_placeholder')} >
     </div>
     {#if updated}
     <FormButtons class="btn-save" cancelButton={false} submitText="Saved!" />

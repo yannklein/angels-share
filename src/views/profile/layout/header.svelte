@@ -4,6 +4,8 @@
   import { notificationMessage } from '../../../stores/notification_message.js'
 
   import { Auth } from '../../../config/firebase'
+  import { _ } from '../../../locales/i18n';
+  
   export let currentUser = {}
 
   onMount(() => {
@@ -32,7 +34,7 @@
 <nav class="primary-toast lighten-1">
   <div class="nav-wrapper">
     <a href="/profile/" class="brand-logo">
-      Hi {currentUser.name} 🕊
+      {$_('profile.header.hi')} {currentUser.name} 🕊
     </a>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger">
       <i class="material-icons">menu</i>
@@ -41,13 +43,13 @@
       <li>
         <a href="#" class="dropdown-trigger" id="dropdownSettings" data-target="settingsMenu">
           <i class="material-icons left">settings</i>
-          Settings
+          {$_('profile.header.settings')}
         </a>
         <ul id="settingsMenu" class="dropdown-content">
 
           <li>
             <a href="#" on:click={logoutUser}>
-              Log out
+              {$_('profile.header.log_out')}
               <i class="material-icons left">exit_to_app</i>
             </a>
           </li>
@@ -59,13 +61,13 @@
 <ul class="sidenav" id="mobile-demo">
   <li>
     <Navigate to="/profile/">
-      Dashboard
+      {$_('profile.header.dashboard')}
       <i class="material-icons left">dashboard</i>
     </Navigate>
   </li>
   <li>
     <a href="#" on:click={logoutUser}>
-      Log out
+      {$_('profile.header.log_out')}
       <i class="material-icons left">exit_to_app</i>
     </a>
   </li>

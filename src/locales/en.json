@@ -27,5 +27,28 @@
   "footer": {
     "made_with": "Made with ",
     "by": " by"
+  },
+  "profile": {
+    "dashboard": {
+      "title": "Dashboard",
+      "donation_status": "Donation messages will be sent every 1st of each month. ",
+      "setting_title": "Message settings",
+      "setting_descr": "Select the way for us to send you our donatin suggestions:",
+      "mail_placeholder": "Enter your mail!",
+      "id_placeholder": "Enter your ID!",
+      "saved_notif": "Saved!"
+    },
+    "sidebar": {
+      "home_icon": "Home",
+      "dashboard_icon": "Dashboard",
+      "npo_icon": "Featured NPO",
+      "main_menu": "Main menu"
+    },
+    "header": {
+      "hi": "Hi",
+      "settings": "Settings",
+      "log_out": "Log out",
+      "dashboard": "Dashboard"
+    }
   }
 }

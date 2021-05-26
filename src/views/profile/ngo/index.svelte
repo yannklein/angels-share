@@ -1,5 +1,7 @@
 <script>
   import { currentNgo } from '../../../stores/ngo';
+  import { _ } from '../../../locales/i18n';
+  
   currentNgo.init();
 
   let ngoLoaded = false;
@@ -83,7 +85,7 @@
     <div class="featured-ngo-container">
       {#if ngoLoaded}
       <!-- <div style="color: black">This: {JSON.stringify(currentNgo)}</div> -->
-      <h2>This month's NGO {$currentNgo.flag}</h2>
+      <h2>{$_('home.featured_ngo.title')} {$currentNgo.flag}</h2>
       <div class="featured-ngo">
         <div class="featured-ngo-card">
           <a class="featured-ngo-card-title" href={$currentNgo.donation_url} target="_blank">
