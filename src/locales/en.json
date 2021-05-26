@@ -50,5 +50,28 @@
       "log_out": "Log out",
       "dashboard": "Dashboard"
     }
+  },
+  "sign_up": {
+    "title": "One step away from becoming an angel ",
+    "login_btn": "Already have an account? Log in",
+    "char_limit": "must be at least 6 characters",
+    "char_limit-4": "must be at least 6 characters",
+    "line_needed": "Line ID needed!",
+    "phone_needed": "Phone number needed!",
+    "account created": "Your account was created successfully!",
+    "your_name": "Your name",
+    "donation_msg_txt": "Where should we send you donation messages?",
+    "send_mail": "Send via e-mail",
+    "send_line": "Send via Line",
+    "send_whatsapp": "Send via Whatsapp",
+    "your_line": "Your line ID",
+    "your_whatsapp": "Your phone number for Whatsapp",
+    "create_acc": "Create account"
+  },
+  "login": {
+    "title": "Log in",
+    "signup_btn": "Create an account.",
+    "char_limit": "must be at least 6 characters",
+    "hi_back": "Welcome back!"
   }
 }

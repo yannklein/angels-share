@@ -1,7 +1,8 @@
 <script>
   import { Navigate } from 'svelte-router-spa'
-
   import LoginForm from './form.svelte'
+  import { _ } from '../../../locales/i18n';
+
 </script>
 
 <style>
@@ -17,14 +18,14 @@
         <div class="card card-login">
           <div class="card-login-splash">
             <div class="wrapper">
-              <h3 class="center-align mt10">Svelte & Firebase</h3>
+              <h3 class="center-align mt10">{$_('login.title')}</h3>
             </div>
           </div>
           <div class="card-content">
-            <span class="card-title center-align">Log In</span>
+            <span class="card-title center-align">{$_('login.title')}</span>
             <LoginForm />
             <p>
-              <Navigate to="signup">Create an account.</Navigate>
+              <Navigate to="signup">{$_('login.signup_btn')}</Navigate>
             </p>
           </div>
         </div>

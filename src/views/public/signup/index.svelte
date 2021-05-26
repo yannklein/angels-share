@@ -2,6 +2,8 @@
   import { Navigate } from 'svelte-router-spa'
 
   import SignupForm from './form.svelte'
+  import { _ } from '../../../locales/i18n';
+
 </script>
 
 <style>
@@ -17,13 +19,13 @@
         <div class="card card-login">
           <div class="card-login-splash">
             <div class="wrapper">
-              <h3 class="center-align mt10">One step away from becoming an angel 🕊</h3>
+              <h3 class="center-align mt10">{$_('sign_up.title')}🕊</h3>
             </div>
           </div>
           <div class="card-content">
             <SignupForm />
             <p>
-              <Navigate to="login"><span style="color:black">Already have an account? Log in</span></Navigate>
+              <Navigate to="login"><span style="color:black">{$_('sign_up.login_btn')}</span></Navigate>
             </p>
           </div>
         </div>

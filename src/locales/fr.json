@@ -50,5 +50,28 @@
       "log_out": "Déconnecter",
       "dashboard": "Tableau de bord"
     }
+  },
+  "sign_up": {
+    "title": "Plus qu'une étape pour devenir membre ",
+    "login_btn": "Déjà membre? Connectez-vous",
+    "char_limit": "doit avoir au moins 6 caractères",
+    "char_limit-4": "doit avoir au moins 4 caractères",
+    "line_needed": "Entrez votre ID Line!",
+    "phone_needed": "Entrez votre numéro de téléphone",
+    "account created": "Votre compte est prêt!",
+    "your_name": "Votre nom",
+    "donation_msg_txt": "Ou devrions-nous vous envoyer les messages de donation?",
+    "send_mail": "Envoyer par e-mail",
+    "send_line": "Envoyer via Line",
+    "send_whatsapp": "Envoyer via Whatsapp",
+    "your_line": "Votre ID Line",
+    "your_whatsapp": "Votre numéro de téléphone pour Whatsapp",
+    "create_acc": "Créer votre compte"
+  },
+  "login": {
+    "title": "Se connecter",
+    "signup_btn": "Devenir membre",
+    "char_limit": "doit avoir au moins 6 caractères",
+    "hi_back": "Heureux de vous revoir!"
   }
 }

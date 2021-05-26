@@ -14,13 +14,14 @@
   import { Users } from '../../../middleware/database/users'
 
   import { currentUser } from '../../../stores/current_user'
+  import { _ } from '../../../locales/i18n';
 
   const signupConstraints = {
     name: {
       presence: true,
       length: {
         minimum: 4,
-        message: 'must be at least 4 characters'
+        message: $_('sign_up.char_limit-4')
       }
     },
     email: {
@@ -31,7 +32,7 @@
       presence: true,
       length: {
         minimum: 6,
-        message: 'must be at least 6 characters'
+        message: $_('sign_up.char_limit')
       }
     }
   }
@@ -72,12 +73,12 @@
   const validateLoginForm = () => {
     resetErrorInfo()
     if (line_subs && line_id === "") {
-      lineMessage = "Line ID needed!"
+      lineMessage = $_('sign_up.line_needed')
       lineError = true
       return false
     }
     if (whatsapp_subs && whatsapp_id === "") {
-      whatsappMessage = "Phone number needed!"
+      whatsappMessage = $_('sign_up.phone_needed')
       whatsappError = true
       return false
     }
@@ -126,7 +127,7 @@
           createUser(userInfo)
           .then(() => {
             notificationMessage.set({
-              message: 'Your account was created successfully!',
+              message: $_('sign_up.account created'),
               type: 'success-toast'
             })
             currentUser.set(userInfo);
@@ -149,34 +150,34 @@
   <TextInput
     bind:value={name}
     error={nameError}
-    label="Your name"
+    label={$_('sign_up.your_name')}
     icon="person"
     isFocused={true}
     errorMessage={nameMessage} />
   <EmailInput bind:value={email} error={emailError} errorMessage={emailMessage} />
   <PasswordInput bind:value={password} error={passwordError} errorMessage={passwordMessage} />
-  <span class="card-title center-align">Where should we send you donation messages?</span>
+  <span class="card-title center-align">{$_('sign_up.donation_msg_txt')}</span>
   <CheckBox
     bind:checked={email_subs}
     id="email_subs_chbox"
-    label="Send via e-mail" />
+    label={$_('sign_up.send_mail')} />
   <CheckBox
     bind:checked={line_subs}
     id="line_subs_chbox"
-    label="Send via Line" />
+    label={$_('sign_up.send_line')} />
   <TextInput
     bind:value={line_id}
     error={lineError}
-    label="Your line ID"
+    label={$_('sign_up.your_line')}
     errorMessage={lineMessage} />
   <CheckBox
     bind:checked={whatsapp_subs}
     id="whatsapp_subs_chbox"
-    label="Send via Whatsapp" />
+    label={$_('sign_up.send_whatsapp')} />
   <TextInput
     bind:value={whatsapp_id}
     error={whatsappError}
-    label="Your phone number for Whatsapp"
+    label={$_('sign_up.your_whatsapp')}
     errorMessage={whatsappMessage} />
-  <FormButtons cancelButton={false} submitText="Create account" isLoading={disableAction} />
+  <FormButtons cancelButton={false} submitText={$_('sign_up.create_acc')} isLoading={disableAction} />
 </form>
