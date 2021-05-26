@@ -94,6 +94,9 @@
 </style>
 
 <script>
+  import { _ } from '../../../locales/i18n';
+  // import { Link } from "svelte-routing";
+
   export let loggedIn;
   
   let isActive = false;
@@ -105,14 +108,14 @@
 <div class="navbar-vanilla">
   <a class="navbar-vanilla-section" href="/">
     <img class="navbar-vanilla-logo" src="/favicon.svg" alt="logo">
-    <h2 class="navbar-vanilla-brand">The Angel's Share</h2>
+    <h2 class="navbar-vanilla-brand">{$_('home.menu.title')}</h2>
   </a>
   <div class="navbar-vanilla-section">
     <div class="navbar-vanilla-profile" class:active="{isActive}">
       {#if loggedIn}
-      <a href="/profile"><p>Profile</p></a>
+      <a href="/profile"><p>{$_('home.menu.profile_link')}</p></a>
       {:else}
-      <a href="/login"><p>Login</p></a>
+      <a href="/login"><p>{$_('home.menu.login_link')}</p></a>
       {/if}
     </div>
   </div>
