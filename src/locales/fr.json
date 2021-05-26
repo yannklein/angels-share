@@ -1,9 +1,31 @@
 {
   "home": {
     "menu": {
-      "title": "La part des anges",
+      "title": "La Part des Anges",
       "profile_link": "Mon espace",
       "login_link": "Se connecter"
+    },
+    "featured_ngo": {
+      "title": "L'ONG du mois"
+    },
+    "hero": {
+      "title": "Une manière simple et sans commitement ",
+      "title_span": "d'aider les autres",
+      "3steps": "3 étapes:",
+      "step-1": "Devenez membre de la Part des Anges",
+      "step-2": "Recevez une requète de donation d'une ONG différente chaque mois",
+      "step-3": "Convaincu par l'ONG? Donnez-lui 50€",
+      "sign_up": "Ca commence ici"
+    },
+    "main_features": {
+      "title": "Si vous voulez aider les autres 💪",
+      "reason-1": "Mais que vous ne savez pas comment...",
+      "reason-2": "Ou que vous n'avez pas le temps pour ça...",
+      "reason-3": "La Part des Anges est pour vous!"
     }
+  },
+  "footer": {
+    "made_with": "Fait avec ",
+    "by": " par"
   }
 }

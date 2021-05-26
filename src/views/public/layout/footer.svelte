@@ -10,9 +10,13 @@
   }
 </style>
 
+<script>
+  import { _ } from '../../../locales/i18n';
+</script>
+
 <div class="footer-container">
   <span>
-    Made with <i class="fas fa-heart"></i> by
+    {$_('footer.made_with')}<i class="fas fa-heart"></i>{$_('footer.by')}
     <a href="https://www.yannklein.me">Yann Klein</a>
   </span>
 </div>

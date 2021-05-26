@@ -35,20 +35,24 @@
   }
 </style>
 
+<script>
+  import { _ } from '../../../locales/i18n';
+</script>
+
 <div class="features-container  primary-toast">
-  <h2>If you want to help people 💪</h2>
+  <h2>{$_('home.main_features.title')}</h2>
   <div class="reasons">
     <div class="reasons-card">
       <p class="reasons-icon"><i class="fas fa-map-signs"></i></p>
-      <p>But don't really know how...</p>
+      <p>{$_('home.main_features.reason-1')}</p>
     </div>
     <div class="reasons-card">
       <p class="reasons-icon"><i class="fas fa-hourglass-end"></i></p>
-      <p>or even can't find the time...</p>
+      <p>{$_('home.main_features.reason-2')}</p>
     </div>
     <div class="reasons-card">
       <p class="reasons-icon">😍</p>
-      <p>Angel's share is for you!</p>
+      <p>{$_('home.main_features.reason-3')}</p>
     </div>
   </div>
 </div>

@@ -4,6 +4,28 @@
       "title": "The Angel's share",
       "profile_link": "Profile",
       "login_link": "Login"
+    },
+    "featured_ngo": {
+      "title": "This month's NPO"
+    },
+    "hero": {
+      "title": "A no-commitment, easy way to",
+      "title_span": "help others",
+      "3steps": "3 Steps:",
+      "step-1": "Become an Angel's member",
+      "step-2": "Get a NPO donation request message every month",
+      "step-3": "Convinced by the NGO pitch? Give $50",
+      "sign_up": "Let's go!"
+    },
+    "main_features": {
+      "title": "If you want to help people 💪",
+      "reason-1": "But don't really know how...",
+      "reason-2": "or even can't find the time...",
+      "reason-3": "Angel's share is for you!"
     }
+  },
+  "footer": {
+    "made_with": "Made with ",
+    "by": " by"
   }
 }

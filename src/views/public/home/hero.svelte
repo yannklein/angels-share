@@ -1,5 +1,6 @@
 <script>
   import { Navigate } from 'svelte-router-spa'
+  import { _ } from '../../../locales/i18n';
 </script>
 
 <style>
@@ -77,17 +78,17 @@
 </style>
 
 <div class="hero-container primary-toast">
-  <h1>A no-commitment, über simple way to <span class="highlighted">help others</span></h1>
+  <h1>{$_('home.hero.title')}<span class="highlighted">{$_('home.hero.title_span')}</span></h1>
   <div class="hero-content">
     <div class="steps">
-      <p>3 Steps:</p>
+      <p>{$_('home.hero.3steps')}</p>
       <ol>
-        <li>Become an Angel's member</li>
-        <li>Get a NGO donation request message every month</li>
-        <li>Convinced by the NGO pitch? Give $50</li>
+        <li>{$_('home.hero.step-1')}</li>
+        <li>{$_('home.hero.step-2')}</li>
+        <li>{$_('home.hero.step-3')}</li>
       </ol>
     </div>
-    <a href="/signup" class="hero-btn-white font-amatic">Let's go!</a>
+    <a href="/signup" class="hero-btn-white font-amatic">{$_('home.hero.sign_up')}</a>
   </div>
 
 </div>
