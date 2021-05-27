@@ -6,7 +6,7 @@
   let userMenuItems = [
     { to: '/', icon: 'home', title: $_('profile.sidebar.home_icon') },
     { to: '/profile/', icon: 'dashboard', title: $_('profile.sidebar.dashboard_icon') },
-    { to: 'profile/ngo/', icon: 'volunteer_activism', title: $_('profile.sidebar.npo_icon') }]
+    { to: 'profile/npo/', icon: 'volunteer_activism', title: $_('profile.sidebar.npo_icon') }]
 </script>
 
 <style>

@@ -4,6 +4,6 @@ import { Firestore } from '../../config/firebase'
 // const FirebaseEmployees = Firestore.collection('employees')
 // const FirebaseTeams = Firestore.collection('teams')
 const FirebaseUsers = Firestore.collection('users')
-const FirebaseNgos = Firestore.collection('ngos')
+const FirebaseNpos = Firestore.collection('npos')
 
-export { FirebaseUsers, FirebaseNgos}
+export { FirebaseUsers, FirebaseNpos}

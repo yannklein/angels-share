@@ -3,23 +3,11 @@
   import Menu from './menu.svelte'
   import Hero from './hero.svelte'
   import MainFeatures from './main_features.svelte'
-  import FeaturedNgo from './featured_ngo.svelte'
+  import FeaturedNpo from './featured_npo.svelte'
   import Footer from '../layout/footer.svelte'
-  import { currentUser } from '../../../stores/current_user';
-  import { currentNgo } from '../../../stores/ngo';
+  import { currentUser } from '../../../stores/current_user'
 
   let loggedIn = false;
-  let ngoLoaded = false;
-
-  currentNgo.init();
-
-  $: if (Object.keys($currentNgo).length === 0) {
-    console.log("ngo not loaded yet")
-    ngoLoaded = false;
-  } else {
-    console.log("ngo loaded", $currentNgo)
-    ngoLoaded = true;
-  }
 
   $: if (Object.keys($currentUser).length === 0) {
     console.log($currentUser)
@@ -37,7 +25,7 @@
 <div>
   <Menu loggedIn={loggedIn}/>
   <Hero />
-  <FeaturedNgo ngoLoaded={ngoLoaded} currentNgo={$currentNgo}/>
+  <FeaturedNpo/>
   <MainFeatures />
   <Footer />
 </div>

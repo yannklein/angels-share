@@ -79,5 +79,5 @@
 <form ref="form" on:submit|preventDefault={signInUser}>
   <EmailInput bind:value={email} error={emailError} isFocused={true} errorMessage={emailMessage} />
   <PasswordInput bind:value={password} error={passwordError} errorMessage={passwordMessage} />
-  <FormButtons cancelButton={false} submitText={$_('login.title')} isLoading={disableAction} />
+  <FormButtons cancelButton={false} submitText={$_('login.login')} isLoading={disableAction} />
 </form>

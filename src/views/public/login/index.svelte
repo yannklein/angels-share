@@ -22,7 +22,7 @@
             </div>
           </div>
           <div class="card-content">
-            <span class="card-title center-align">{$_('login.title')}</span>
+            <span class="card-title center-align">{$_('login.login')}</span>
             <LoginForm />
             <p>
               <Navigate to="signup">{$_('login.signup_btn')}</Navigate>

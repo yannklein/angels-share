@@ -5,7 +5,7 @@ service cloud.firestore {
       allow create: if userAndAdmin();
       allow update, delete: if userAndAdmin()
     }
-    match /ngos/{ngoId} {
+    match /npos/{npoId} {
       allow read: if isSignedIn();
       allow create: if userAndAdmin();
       allow update, delete: if userAndAdmin()

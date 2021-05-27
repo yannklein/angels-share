@@ -5,16 +5,16 @@
       "profile_link": "Profile",
       "login_link": "Login"
     },
-    "featured_ngo": {
+    "featured_npo": {
       "title": "This month's NPO"
     },
     "hero": {
-      "title": "A no-commitment, easy way to",
+      "title": "A no-commitment, easy way to ",
       "title_span": "help others",
       "3steps": "3 Steps:",
       "step-1": "Become an Angel's member",
       "step-2": "Get a NPO donation request message every month",
-      "step-3": "Convinced by the NGO pitch? Give $50",
+      "step-3": "Convinced by the NPO pitch? Give $50",
       "sign_up": "Let's go!"
     },
     "main_features": {
@@ -69,7 +69,8 @@
     "create_acc": "Create account"
   },
   "login": {
-    "title": "Log in",
+    "title": "Always happy to see you",
+    "login": "Log in",
     "signup_btn": "Create an account.",
     "char_limit": "must be at least 6 characters",
     "hi_back": "Welcome back!"

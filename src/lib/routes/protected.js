@@ -1,6 +1,6 @@
 import ProfileLayout from '../../views/profile/layout/index.svelte'
 import DashboardIndex from '../../views/profile/dashboard/index.svelte'
-import NgoIndex from '../../views/profile/ngo/index.svelte'
+import NpoIndex from '../../views/profile/npo/index.svelte'
 
 const protectedRoutes = [
   {
@@ -8,7 +8,7 @@ const protectedRoutes = [
     component: ProfileLayout,
     nestedRoutes: [
       { name: 'index', component: DashboardIndex },
-      { name: 'ngo', component: NgoIndex }
+      { name: 'npo', component: NpoIndex }
     ]
   }
 ]

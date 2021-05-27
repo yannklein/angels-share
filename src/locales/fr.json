@@ -5,7 +5,7 @@
       "profile_link": "Mon espace",
       "login_link": "Se connecter"
     },
-    "featured_ngo": {
+    "featured_npo": {
       "title": "L'ONG du mois"
     },
     "hero": {
@@ -69,7 +69,8 @@
     "create_acc": "Créer votre compte"
   },
   "login": {
-    "title": "Se connecter",
+    "title": "Toujours heureux de vous voir",
+    "login": "Se connecter",
     "signup_btn": "Devenir membre",
     "char_limit": "doit avoir au moins 6 caractères",
     "hi_back": "Heureux de vous revoir!"

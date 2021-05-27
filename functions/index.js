@@ -28,31 +28,31 @@ exports.scheduledMail = functions.region('europe-west1').pubsub.schedule('11 0 1
         const period = `${date.getFullYear()}-${date.getMonth()}`
         // eslint-disable-next-line promise/no-nesting
         firestore
-          .collection('ngos')
+          .collection('npos')
           .where('period', '==', period)
           .get()
-          .then((ngoQuerySnapshot) => {
-            ngoQuerySnapshot.forEach((ngoDoc) => {
-              const ngoInfo = ngoDoc.data();
+          .then((npoQuerySnapshot) => {
+            npoQuerySnapshot.forEach((npoDoc) => {
+              const npoInfo = npoDoc.data();
               // eslint-disable-next-line promise/no-nesting
               firestore
                 .collection("mails")
                 .add({
                   to: userInfo.email,
                   message: {
-                    subject: "Discover this month Angel's share NGO",
+                    subject: "Discover this month Angel's share NPO",
                     html: `<div style="padding: 16px">
                       <p>Hi ${userInfo.name},</p>
-                      <p>Discover the NGO featured this month:</p>
+                      <p>Discover the NPO featured this month:</p>
                       <div style="margin-top: 32px; display: flex;align-items: center; margin-bottom: 8px;">
-                        <h2>${ngoInfo.name} ${ngoInfo.flag}</h2>
-                        <img style="height: 24px; padding: 4px; margin-left: 8px; background-color: #607d8b;" src="${ngoInfo.logo_url}" alt="logo">
+                        <h2>${npoInfo.name} ${npoInfo.flag}</h2>
+                        <img style="height: 24px; padding: 4px; margin-left: 8px; background-color: #607d8b;" src="${npoInfo.logo_url}" alt="logo">
                       </div>
                       <div style="margin-bottom: 32px">
-                        <p>${ngoInfo.description}</p>
+                        <p>${npoInfo.description}</p>
                       </div>
                       <div style="margin-bottom: 32px">
-                        <p style="margin: 0" >Discover more and donate on their <a href="${ngoInfo.donation_url}">donation page</a></p>
+                        <p style="margin: 0" >Discover more and donate on their <a href="${npoInfo.donation_url}">donation page</a></p>
                         <p style="margin: 0" >Manage your Angel's share profile <a href="https://the-angels-share.web.app/">here</a></p>
                       </div>
                       <p style="margin: 0">Have a great month! 🕊</p>
