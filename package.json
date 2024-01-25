@@ -22,13 +22,14 @@
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
     "start": "sirv public",
-    "start:dev": "sirv public -s --dev",
+    "start:dev": "sirv public -s --dev -p 5003",
     "deploy": "yarn build && firebase deploy",
     "fct-deploy": "firebase deploy --only functions"
   },
   "dependencies": {
     "firebase": "^7.0.0",
     "materialize-css": "^1.0.0",
+    "rollup-plugin-serve": "^1.1.1",
     "svelte-i18n": "^3.3.9",
     "svelte-router-spa": "^5.0.0",
     "validate.js": "^0.13.0"
