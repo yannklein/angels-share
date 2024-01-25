@@ -19,6 +19,10 @@ const nposDb = () => {
     return FirebaseNpos.doc(npoId).get()
   }
 
+  const findFirst = () => {
+    return FirebaseNpos.orderBy("period", "desc").limit(1).get()
+  }
+
   const findByNpoPeriod = (date, lang) => {
     const period = `${date.getFullYear()}-${date.getMonth()}`
     return FirebaseNpos.where('period', '==', period).limit(1).get()
