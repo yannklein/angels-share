@@ -29,7 +29,6 @@
   "dependencies": {
     "firebase": "^7.0.0",
     "materialize-css": "^1.0.0",
-    "rollup-plugin-serve": "^1.1.1",
     "svelte-i18n": "^3.3.9",
     "svelte-router-spa": "^5.0.0",
     "validate.js": "^0.13.0"

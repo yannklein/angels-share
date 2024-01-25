@@ -5,7 +5,7 @@ import livereload from 'rollup-plugin-livereload'
 import { terser } from 'rollup-plugin-terser'
 import css from 'rollup-plugin-css-only'
 import json from "@rollup/plugin-json";
-import serve from 'rollup-plugin-serve';
+// import serve from 'rollup-plugin-serve';
 
 
 const production = !process.env.ROLLUP_WATCH
@@ -39,15 +39,15 @@ export default {
     // https://github.com/rollup/rollup-plugin-commonjs
     resolve({ browser: true }),
     commonjs(),
-    serve({
+    // serve({
 
-      // Set to true to return index.html instead of 404
-      historyApiFallback: false,
+    //   // Set to true to return index.html instead of 404
+    //   historyApiFallback: false,
 
-      // Options used in setting up server
-      host: 'localhost',
-      port: 5002,
-    }),
+    //   // Options used in setting up server
+    //   host: 'localhost',
+    //   port: 5002,
+    // }),
 
     // Watch the `public` directory and refresh the
     // browser on changes when not in production
