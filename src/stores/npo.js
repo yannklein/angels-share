@@ -16,15 +16,18 @@ const initNpo = () => {
 
 const findNpo = (now) => {
   Npos.findByNpoPeriod(now).then(querySnapshot => {
-    if (doc.length === 0) {
+    if (querySnapshot.length === 0) {
       querySnapshot.forEach((doc) => {
         const npoData = doc.data()
         npoInfo.set(npoData);
       });
     } else {
-      doc = Npos.findFirst()
-      const npoData = doc.data()
-      npoInfo.set(npoData);
+      Npos.findFirst().then(querySnapshot => {
+        querySnapshot.forEach((doc) => {
+          const npoData = doc.data()
+          npoInfo.set(npoData);
+        });
+      });
     }
   })
 }

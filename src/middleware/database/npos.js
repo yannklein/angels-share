@@ -20,7 +20,7 @@ const nposDb = () => {
   }
 
   const findFirst = () => {
-    return FirebaseNpos.orderBy("period", "desc").limit(1).get()
+    return FirebaseNpos.orderBy("period", "asc").limit(1).get()
   }
 
   const findByNpoPeriod = (date, lang) => {
@@ -46,6 +46,7 @@ const nposDb = () => {
     findOne,
     findAll,
     findByNpoPeriod,
+    findFirst,
     unarchive
   })
 }
